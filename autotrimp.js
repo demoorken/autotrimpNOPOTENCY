@@ -79,6 +79,7 @@ for (var item in autoTSettings) {
   		var text = optionItem.titles[optionItem.enabled]; 
   		html += "<div class='optionContainer'><div id='toggle" + item + "' class='noselect settingBtn settingBtn" + optionItem.enabled + "' onclick='toggleAutoSetting(\"" + item + "\")'>" + text + "</div><div class='optionItemDescription'>" + optionItem.description + "</div></div> ";
 	}
+	
 }
 autosettings.innerHTML = html;
 
@@ -359,7 +360,7 @@ if (autoTSettings.autohighlight.enabled == 1 || autoTSettings.autohighlight.enab
 
 //Buy speed upgrades
 if (autoTSettings.autoupgrades.enabled == 1) {
-  autotrimpupgrades = ["Egg", "UberHut", "UberHouse", "UberMansion", "UberHotel", "UberResort", "Bounty", "Efficiency", "TrainTacular", "Gymystic", "Megascience", "Megaminer", "Megalumber", "Megafarming", "Speedfarming", "Speedlumber", "Speedminer", "Speedscience", "Potency"]
+  autotrimpupgrades = ["Egg", "UberHut", "UberHouse", "UberMansion", "UberHotel", "UberResort", "Bounty", "Efficiency", "TrainTacular", "Gymystic", "Megascience", "Megaminer", "Megalumber", "Megafarming", "Speedfarming", "Speedlumber", "Speedminer", "Speedscience"]
   for (var key in game.upgrades) {
     if (autotrimpupgrades.indexOf(key) != -1) { 
       if (game.upgrades[key].allowed > game.upgrades[key].done && canAffordTwoLevel(game.upgrades[key])) {
